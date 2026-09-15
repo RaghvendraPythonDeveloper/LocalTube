@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LocalTube — YouTube Downloader</title>
+<link rel="stylesheet" href="/static/style.css">
+</head><body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brandIcon">▶</div><div><b>Local<span>Tube</span></b><small>YouTube Downloader</small></div></div>
+  <nav>
+    <button class="nav active" data-tab="home">⌂ <span>Home</span></button>
+    <button class="nav" data-tab="downloads">⇩ <span>Downloads</span></button>
+    <button class="nav" data-tab="settings">⚙ <span>Settings</span></button>
+  </nav>
+  <div class="sideBottom"><b>⚡ Fast · Simple · Local</b><p>Download videos directly to your computer.</p></div>
+</aside>
+<main>
+<header class="topbar"><div></div><div class="server"><i></i> Local Server <span>▣</span></div></header>
+
+<section id="home" class="tab activeTab">
+  <div class="hero">
+    <div class="eyebrow">LOCAL • PRIVATE • FAST</div>
+    <h1>Paste YouTube <span>Link</span></h1>
+    <p>Inspect available formats, then download directly to your computer.</p>
+    <div class="urlbox"><span class="linkicon">↗</span><input id="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off"><button id="inspect">⌕ &nbsp; Inspect</button></div>
+    <div id="error" class="error"></div>
+  </div>
+
+  <section id="details" class="hidden">
+    <div class="videoCard">
+      <div class="thumbWrap"><img id="thumb"><span class="duration" id="duration"></span></div>
+      <div class="videoInfo">
+        <div class="ytlabel">▶ YouTube</div><h2 id="title"></h2>
+        <div class="meta">Video ready for download</div>
+        <div class="chips"><span>Local processing</span><span>Multiple qualities</span><span>Direct save</span></div>
+      </div>
+      <div class="found"><div class="foundIcon">▷</div><div><strong>Video found!</strong><p>Select a quality below to download.</p></div></div>
+    </div>
+    <div class="qualityHead"><h2>▱ &nbsp;Available quality</h2><button id="best" class="bestBtn">★ &nbsp; Best available</button></div>
+    <div id="formats" class="formats"></div>
+
+    <div id="downloadPanel" class="download hidden">
+      <div class="dlTop"><div class="dlTitle"><div class="dlThumb"><img id="dlThumb"></div><div><strong id="state">Starting…</strong><p id="dlName"></p></div></div><button class="pause" id="pauseBtn" disabled>Ⅱ &nbsp; Pause</button></div>
+      <div class="progressLine"><div class="bar"><i id="bar"></i></div><b id="pct">0%</b></div>
+      <div class="stats"><span>⇩ <b id="rom">—</b></span><span>⌁ <b id="speed">—</b></span><span>◷ ETA <b id="eta">—</b></span></div>
+      <a id="save" class="save hidden">Save file to computer</a>
+    </div>
+  </section>
+</section>
+
+<section id="downloads" class="tab"><div class="empty"><div>⇩</div><h2>Downloads</h2><p>Your completed downloads are stored in the <code>downloads</code> folder beside the app.</p></div></section>
+<section id="settings" class="tab"><div class="empty"><div>⚙</div><h2>Settings</h2><p>Downloads are saved locally. Video/audio merging uses FFmpeg when required.</p></div></section>
+<footer>Use this only for videos you have permission to download. YouTube's terms and copyright rules may apply.</footer>
+</main></div>
+<script src="/static/app.js"></script>
+</body></html>
