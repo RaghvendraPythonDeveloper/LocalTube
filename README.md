@@ -1,4 +1,4 @@
-# LocalTube v2 — localhost YouTube downloader
+# LocalTube  — localhost YouTube downloader
 
 This version includes a workaround for the recent YouTube `tv_downgraded` / "The page needs to be reloaded" extraction problem and updates yt-dlp to the current stable release.
 
